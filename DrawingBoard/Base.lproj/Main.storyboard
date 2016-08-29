@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Un7-Ep-LTC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfU-mm-3bB">
+                                        <rect key="frame" x="0.0" y="12" width="51" height="30"/>
+                                        <state key="normal" title="回退"/>
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Tl-fa-kJz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhD-WN-dqo">
+                                        <rect key="frame" x="48" y="12" width="51" height="30"/>
+                                        <state key="normal" title="清屏"/>
+                                        <connections>
+                                            <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mE6-Az-4df"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyv-dW-udB">
+                                        <rect key="frame" x="94" y="12" width="51" height="30"/>
+                                        <state key="normal" title="橡皮"/>
+                                        <connections>
+                                            <action selector="rubber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ng2-Pb-KjJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFe-2b-Mko">
+                                        <rect key="frame" x="239" y="12" width="81" height="30"/>
+                                        <state key="normal" title="保存"/>
+                                        <connections>
+                                            <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TMr-Xu-Ham"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCr-1q-LW9">
+                                        <rect key="frame" x="141" y="12" width="51" height="30"/>
+                                        <state key="normal" title="照片"/>
+                                        <connections>
+                                            <action selector="photo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m2i-tn-PMt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9019551522" green="0.94613445169999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHG-ub-97j" customClass="DrawView">
+                                <rect key="frame" x="0.0" y="44" width="320" height="452"/>
+                                <color key="backgroundColor" red="0.86544471150000002" green="0.84911913350000001" blue="0.85076998319999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hha-gd-xJd">
+                                <rect key="frame" x="0.0" y="496" width="320" height="72"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="3Nd-T0-gUk">
+                                        <rect key="frame" x="6" y="0.0" width="308" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChaged:" destination="BYZ-38-t0r" eventType="valueChanged" id="uYF-Uj-it5"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uig-OS-lWx">
+                                        <rect key="frame" x="0.0" y="33" width="96" height="39"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.074743433489999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cv0-G6-C2D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-eg-RBV">
+                                        <rect key="frame" x="111" y="33" width="100" height="39"/>
+                                        <color key="backgroundColor" red="0.14124227389999999" green="0.099502686500000007" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ena-GE-D0l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyh-Xi-rnW">
+                                        <rect key="frame" x="225" y="33" width="95" height="39"/>
+                                        <color key="backgroundColor" red="1" green="0.88969095340000004" blue="0.055879519349999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hFx-zX-Q1f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84361392000000002" green="0.81105808109999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="drawView" destination="XHG-ub-97j" id="7zH-dG-4mh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202" y="314"/>
+        </scene>
+    </scenes>
+</document>
